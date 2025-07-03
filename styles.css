@@ -1,0 +1,117 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: monospace;
+      background: radial-gradient(#10ec5a, #3bb6d4, #9b4075);
+      background-size: 300% 300%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(180px) saturate(100%);
+      -webkit-backdrop-filter: blur(12px); 
+      color: #fff;
+      padding: 2.5rem;
+      max-width: 320px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 
+        inset -5px -2px 4px rgba(70, 155, 194, 0.473),  
+        inset 5px 2px 4px rgba(238, 182, 238, 0.582);  
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      letter-spacing: 0.25rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #20ee19d3, rgba(36, 108, 241, 0.555), rgba(255, 0, 191, 0.658));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0 auto 1rem;
+      color: #faf8f8;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .avatar:hover {
+      box-shadow: 0 0 30px #0ff, 0 0 40px #0cf;
+}
+
+    .name {
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .title {
+      font-size: 1rem;
+      opacity: 0.75;
+      margin-bottom: 1rem;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .skill {
+      background: rgba(255, 255, 255, 0.192);
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    .links a {
+      color: #0ff;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.2s ease;
+    }
+
+    .links a:hover {
+      color: #f713d1;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @media (max-width: 400px) {
+     .card {
+        width: 90%;
+        padding: 1.5rem;
+  }
+
+    .skills {
+        gap: 0.25rem;
+  }
+
+    .links a {
+        font-size: 1rem;
+  }
+}
