@@ -40,7 +40,8 @@
       height: 80px;
       letter-spacing: 0.25rem;
       border-radius: 50%;
-      background: linear-gradient(135deg, #20ee19d3, rgba(36, 108, 241, 0.555), rgba(255, 0, 191, 0.658));
+      background-image: url("profile_pic.jpg");
+      background-size: cover;
       display: flex;
       align-items: center;
       justify-content: center;
